@@ -54,19 +54,16 @@ Room Dungeon::MakeRoom(std::vector<Room> &rooms)
 {
     int width = 2 + rand() % 6;
     int height = 2 + rand() % 6;
-    Position position = {};
-    Room room = {};
-    room = {{position, width, height}};
+    Position position = {15, 15};
+    Room room = {{position, width, height}};
     if (rooms.size() > 0) {
         while (!IsRoomInTheRightPlace(rooms, room)) {
             int sign_x = (rand() % 2 == 1)? 1 : -1;
             int sign_y = (rand() % 2 == 1)? 1 : -1;
-            position.x +=  sign_x * rand() % 2;
-            position.y +=  sign_y * rand() % 2 ;
+            position.x +=  sign_x * rand() % 5;
+            position.y +=  sign_y * rand() % 5 ;
             room.rect.position = position;
         }
-    } else {
-        room.rect.position = {15, 15};
     }
     return room;
 }
