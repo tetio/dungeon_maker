@@ -18,15 +18,15 @@ int main()
     while (!WindowShouldClose())
     {
         // 1 - Event Handling
-        if (IsKeyPressed(KEY_ENTER))
-        {
-            SetWindowTitle("Simulation is running ...");
-        }
-        else if (IsKeyPressed(KEY_SPACE))
-        {
-            dm.FillGrid();
-            SetWindowTitle("Simulation is stopped");
-        }
+        // if (IsKeyPressed(KEY_ENTER))
+        // {
+        //     SetWindowTitle("Simulation is running ...");
+        // }
+        // else if (IsKeyPressed(KEY_SPACE))
+        // {
+        //     dm.FillGrid();
+        //     SetWindowTitle("Simulation is stopped");
+        // }
         // 2 - Update State
         dm.Update();
         // 3 - Drawing
